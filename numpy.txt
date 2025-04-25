@@ -1,0 +1,71 @@
+NumPy(Numerical Python) 是 Python 语言的一个扩展程序库，支持大量的维度数组与矩阵运算，
+此外也针对数组运算提供大量的数学函数库。
+numpy.ndarray 是 NumPy 库中的一个核心数据类型，用于表示多维数组。它是 NumPy 中最重要的数据结构之一，
+提供了高效的数值计算能力。下面是对 numpy.ndarray 类型的详细解释：
+
+numpy.ndarray 类型的特点
+多维数组：numpy.ndarray 可以表示多维数组，支持一维、二维、三维乃至更高维度的数据。
+1. 同质性：数组中的所有元素类型必须相同（同质性）。常见的类型有整数（int）、浮点数（float）、布尔值（bool）等。
+2. 高效计算：NumPy 通过内部实现和优化，使得 ndarray 在处理大规模数据和执行数值计算时非常高效。
+3. 丰富的操作：提供了丰富的数学函数和操作符，可以对数组进行各种算术运算、统计分析、线性代数运算等。
+4。 广播机制：支持广播机制，允许不同形状的数组进行算术运算。
+创建 numpy.ndarray
+可以通过多种方式创建 numpy.ndarray，如从列表转换、使用内置函数、从文件读取等。以下是一些常见的创建方式：
+
+import numpy as np
+
+# 从列表创建
+array1 = np.array([1, 2, 3, 4, 5])
+
+# 创建全零数组
+array2 = np.zeros((3, 3))
+
+# 创建全一数组
+array3 = np.ones((2, 4))
+
+# 创建指定范围的数组
+array4 = np.arange(0, 10, 2)
+
+# 创建等间隔数组
+array5 = np.linspace(0, 1, 5)
+
+示例代码
+以下示例展示了如何创建和操作 numpy.ndarray：
+
+import numpy as np
+
+# 创建一个一维数组
+array1 = np.array([1, 2, 3, 4, 5])
+print("一维数组:", array1)
+
+# 创建一个二维数组
+array2 = np.array([[1, 2, 3], [4, 5, 6]])
+print("二维数组:\n", array2)
+
+# 创建一个三维数组
+array3 = np.array([[[1, 2], [3, 4]], [[5, 6], [7, 8]]])
+print("三维数组:\n", array3)
+
+# 数组的形状
+print("数组的形状:", array3.shape)
+
+# 数组的数据类型
+print("数组的数据类型:", array1.dtype)
+
+# 数组的元素个数
+print("数组的元素个数:", array2.size)
+
+# 数组的维度
+print("数组的维度:", array3.ndim)
+
+# 数组的基本运算
+array4 = np.array([10, 20, 30, 40])
+print("数组加法:", array1 + array4)
+print("数组乘法:", array1 * 2)
+print("数组求和:", np.sum(array1))
+print("数组均值:", np.mean(array1))
+
+总结
+numpy.ndarray 是 NumPy 中用于表示多维数组的核心数据结构。它提供了高效的数值计算能力，
+支持多种创建和操作方式，是科学计算和数据处理中的基础工具。
+
